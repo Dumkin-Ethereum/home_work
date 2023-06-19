@@ -1,0 +1,487 @@
+{
+  "contractName": "Demo",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "Echo",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        }
+      ],
+      "name": "echo",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"Echo\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"}],\"name\":\"echo\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Demo.sol\":\"Demo\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Demo.sol\":{\"keccak256\":\"0xf6452d088d4f698ecd360101033994c6bd3fc8ddde95e4be61cbf9791b04db9c\",\"urls\":[\"bzz-raw://eddff519290184c416774750228fa9f19463404e3134549a34cebdde3c798a60\",\"dweb:/ipfs/QmYeBi4m1xcFwYdttqmEEHruoSnasaE5QyTFB5aiNwDuPj\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610145806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063f15da72914610030575b600080fd5b6100a76004803603602081101561004657600080fd5b810190808035906020019064010000000081111561006357600080fd5b82018360208201111561007557600080fd5b8035906020019184600183028401116401000000008311171561009757600080fd5b90919293919293905050506100a9565b005b7fdb84d7c006c4de68f9c0bd50b8b81ed31f29ebeec325c872d36445c6565d757c828260405180806020018281038252848482818152602001925080828437600081840152601f19601f820116905080830192505050935050505060405180910390a1505056fea265627a7a723158203077daa251dab9cce246823ef74584ccba183e708878670127d40fe9575c773964736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063f15da72914610030575b600080fd5b6100a76004803603602081101561004657600080fd5b810190808035906020019064010000000081111561006357600080fd5b82018360208201111561007557600080fd5b8035906020019184600183028401116401000000008311171561009757600080fd5b90919293919293905050506100a9565b005b7fdb84d7c006c4de68f9c0bd50b8b81ed31f29ebeec325c872d36445c6565d757c828260405180806020018281038252848482818152602001925080828437600081840152601f19601f820116905080830192505050935050505060405180910390a1505056fea265627a7a723158203077daa251dab9cce246823ef74584ccba183e708878670127d40fe9575c773964736f6c63430005100032",
+  "sourceMap": "28:144:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:144:0;;;;;;;",
+  "deployedSourceMap": "28:144:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:144:0;;;;;;;;;;;;;;;;;;;84:85;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;84:85:0;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;84:85:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;84:85:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;84:85:0;;;;;;;;;;;;:::i;:::-;;;148:13;153:7;;148:13;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;148:13:0;;;;;;;;;;;;;;84:85;;:::o",
+  "source": "pragma solidity >=0.5.8;\r\n\r\ncontract Demo {\r\n    event Echo(string message);\r\n\r\n    function echo(string calldata message) external {\r\n        emit Echo(message);\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\ndumk\\OneDrive\\Рабочий стол\\Ethereum\\home_work\\2 Создание токена проекта\\project-token-creation\\contracts\\Demo.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Demo.sol",
+    "exportedSymbols": {
+      "Demo": [
+        16
+      ]
+    },
+    "id": 17,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 16,
+        "linearizedBaseContracts": [
+          16
+        ],
+        "name": "Demo",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 5,
+            "name": "Echo",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3,
+                  "indexed": false,
+                  "name": "message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5,
+                  "src": "60:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "60:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "59:16:0"
+            },
+            "src": "49:27:0"
+          },
+          {
+            "body": {
+              "id": 14,
+              "nodeType": "Block",
+              "src": "132:37:0",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11,
+                        "name": "message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 7,
+                        "src": "153:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      ],
+                      "id": 10,
+                      "name": "Echo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5,
+                      "src": "148:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 12,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "148:13:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 13,
+                  "nodeType": "EmitStatement",
+                  "src": "143:18:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 15,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "echo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7,
+                  "name": "message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 15,
+                  "src": "98:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "98:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "97:25:0"
+            },
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "132:0:0"
+            },
+            "scope": 16,
+            "src": "84:85:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 17,
+        "src": "28:144:0"
+      }
+    ],
+    "src": "0:172:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Demo.sol",
+      "exportedSymbols": {
+        "Demo": [
+          16
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".8"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            16
+          ],
+          "name": "Demo",
+          "scope": 17
+        },
+        "children": [
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "Echo"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "message",
+                      "scope": 5,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 2,
+                        "name": "ElementaryTypeName",
+                        "src": "60:6:0"
+                      }
+                    ],
+                    "id": 3,
+                    "name": "VariableDeclaration",
+                    "src": "60:14:0"
+                  }
+                ],
+                "id": 4,
+                "name": "ParameterList",
+                "src": "59:16:0"
+              }
+            ],
+            "id": 5,
+            "name": "EventDefinition",
+            "src": "49:27:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "echo",
+              "scope": 16,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "message",
+                      "scope": 15,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 6,
+                        "name": "ElementaryTypeName",
+                        "src": "98:6:0"
+                      }
+                    ],
+                    "id": 7,
+                    "name": "VariableDeclaration",
+                    "src": "98:23:0"
+                  }
+                ],
+                "id": 8,
+                "name": "ParameterList",
+                "src": "97:25:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 9,
+                "name": "ParameterList",
+                "src": "132:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_calldata_ptr",
+                                  "typeString": "string calldata"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 5,
+                              "type": "function (string memory)",
+                              "value": "Echo"
+                            },
+                            "id": 10,
+                            "name": "Identifier",
+                            "src": "148:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 7,
+                              "type": "string calldata",
+                              "value": "message"
+                            },
+                            "id": 11,
+                            "name": "Identifier",
+                            "src": "153:7:0"
+                          }
+                        ],
+                        "id": 12,
+                        "name": "FunctionCall",
+                        "src": "148:13:0"
+                      }
+                    ],
+                    "id": 13,
+                    "name": "EmitStatement",
+                    "src": "143:18:0"
+                  }
+                ],
+                "id": 14,
+                "name": "Block",
+                "src": "132:37:0"
+              }
+            ],
+            "id": 15,
+            "name": "FunctionDefinition",
+            "src": "84:85:0"
+          }
+        ],
+        "id": 16,
+        "name": "ContractDefinition",
+        "src": "28:144:0"
+      }
+    ],
+    "id": 17,
+    "name": "SourceUnit",
+    "src": "0:172:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "11155111": {
+      "events": {},
+      "links": {},
+      "address": "0xbaCe9C8A67DD4423D95f44edceE8a52Bb570EC39",
+      "transactionHash": "0x51e6eaed629eacbd89bca2cbe1f3c5cd5de63ce9f04424de4167fcfc62edf6ae"
+    }
+  },
+  "schemaVersion": "3.4.14",
+  "updatedAt": "2023-06-19T22:39:49.448Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
