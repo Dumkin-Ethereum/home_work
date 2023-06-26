@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity >=0.5.16;
 
 contract EventContract {
+
+  uint public number = 1;
 
   struct Transaction {
     address _to;
@@ -9,26 +11,26 @@ contract EventContract {
     bool _successful;
   }
 
-  event TransactionNotification(Transaction _transaction, bool _wasDeleted);
+  event TransactionNotification(address indexed from, Transaction _transaction, bool indexed _wasDeleted);
 
   mapping(address => Transaction) public map;
 
-  function sendTransaction(address to) public payable {
+  function sendTransaction(address _to) public payable {
 
-    address payable _to = payable(to);
-    _to.transfer(msg.value);
+    address payable to = payable(_to);
+    to.transfer(msg.value);
 
-    Transaction memory _transaction = Transaction(to, msg.value, true);
+    Transaction memory _transaction = Transaction(_to, msg.value, true);
 
     map[msg.sender] = _transaction;
-    emit TransactionNotification(_transaction, false);
+    emit TransactionNotification(msg.sender, _transaction, false);
   }
 
   function clearHistory() public {
 
     Transaction memory _transaction = map[msg.sender];
     delete map[msg.sender];
-    emit TransactionNotification(_transaction, false);
+    emit TransactionNotification(msg.sender, _transaction, true);
   }
 
 }
