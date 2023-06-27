@@ -25,9 +25,10 @@ contract RPS{
         _;
     }
 
-    function registration() public registrationIsPossible() { //FUNC
+    function registration() external registrationIsPossible() returns(bool){
         participantsData[msg.sender] = GameData(0, true);
         participants.push(msg.sender);
+        return true;
     }
 
     modifier choiceAvailable () {
@@ -44,18 +45,25 @@ contract RPS{
         }
     }
 
-    function choose(bytes32 _hashedChoice) external choiceAvailable() stopVoting(){ //FUNC
+    function choose(bytes32 _hashedChoice) external choiceAvailable() stopVoting() returns(bool){ //FUNC
         participantsData[msg.sender].commit = _hashedChoice;
+        return true;
     }
 
-    function revealChoice(uint _choice, bytes32 _secret) external { //FUNC
-        require(votingStopped);
+    function revealChoice(uint _choice, bytes32 _secret) external returns(bool){ //FUNC
+        if(!votingStopped){
+            return false;
+        }
 
         bytes32 commit = keccak256(abi.encodePacked(_choice, _secret, msg.sender));
 
-        require(commit == participantsData[msg.sender].commit);
-
-        emit RevealAnwer(msg.sender, variants[_choice]);
+        if(commit == participantsData[msg.sender].commit){
+            emit RevealAnwer(msg.sender, variants[_choice]);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
 }

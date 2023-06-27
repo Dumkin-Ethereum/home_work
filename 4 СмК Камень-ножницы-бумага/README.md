@@ -4,4 +4,4 @@
 Думкин Никита Алексеевич
 
 ## Адрес СмК в сети Sepolia
-0xB1e004ac02d98E5CF9F0e9A258DAfF0dcD45e004
+0x9B63BEF580f07fea7E697D100f96F11E75c5Df0d
